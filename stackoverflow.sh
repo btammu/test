@@ -4,3 +4,5 @@ AUTHORIZATION=$(curl --location -u btammu:Budda@123TCS --request POST 'https://a
 AUTHORIZATION = `jq '.access_token' <<< "$AUTHORIZATION"`
 
 AUTHORIZATION=`echo "$AUTHORIZATION" | tr -d '"'`.
+
+echo "$AUTHORIZATION"
