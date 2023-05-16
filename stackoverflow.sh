@@ -4,5 +4,5 @@ echo "Curl executed succeeded!!!"
 echo "Data of curl is $json"
 echo "Curl executed succeeded!!!"
 echo "Data of curl is $newtoken"
-curl -X POST -H 'Content-Type: application/json' -H "Authorization: Basic $newtoken" -d'{"type":"page","title":"new page","space":{"key":"TST"},"body":{"storage":{"value":"<p>This is a new page</p>","representation":"storage"}}}' https://budda-tammu.atlassian.net/wiki/rest/api/content/ | python -mjson.tool
+curl -X POST -H 'Content-Type: application/json' -H "Authorization: Basic $newtoken" -d'{"type":"page","title":"new page","space":{"key":"TST"},"body":{"storage":{"value":"<p>This is a new page</p>","representation":"storage"}}}' https://budda-tammu.atlassian.net/wiki/rest/api/content/
 echo "Sonar Quality gate succeeded!!!"
