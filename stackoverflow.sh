@@ -4,5 +4,5 @@ echo "Curl executed succeeded!!!"
 echo "Data of curl is $json"
 echo "Curl executed succeeded!!!"
 echo "Data of curl is $newtoken"
-curl -D- -X POST -u $user1:$pass1 'https://budda-tammu.atlassian.net/rest/api/2/issue/' --header 'Authorization: Basic $newtoken' --data '{"fields": {"project":{"key": "BTAM"}, "summary": "REST EXAMPLE API", "description": "Creating an issue via REST API", "issuetype": {"name": "Task"}}}'
+curl -X POST -u $user1:$pass1 'https://budda-tammu.atlassian.net/rest/api/2/issue/' --header 'Content-Type: application/json' --header 'Authorization: Basic $newtoken' --data '{"fields": {"project":{"key": "BTAM"}, "summary": "REST EXAMPLE API", "description": "Creating an issue via REST API", "issuetype": {"name": "Task"}}}'
 echo "Jira created successfully"
