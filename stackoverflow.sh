@@ -1,8 +1,5 @@
 
-AUTHORIZATION=$(curl --location -u btammu:Budda@123TCS --request POST 'https://api.github.com/authorizations' --header 'Content-Type: application/x-www-form-urlencoded')
-
-AUTHORIZATION = `jq '.access_token' <<< "$AUTHORIZATION"`
-
-AUTHORIZATION=`echo "$AUTHORIZATION" | tr -d '"'`.
-
-echo "$AUTHORIZATION"
+json=$(curl -v -u $user1:$pass1 -X POST \'https://budda-tammu.atlassian.net/rest/api/2/myself\')
+echo $json
+token=$(echo $json | sed "s/{.*\\"Authorization\\":\\"\\([^\\"]*\\).*}/\\1/g")
+echo $token
