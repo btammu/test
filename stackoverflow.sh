@@ -1,5 +1,5 @@
 #!/bin/bash
-token=$(curl -kv -i -X POST 'https://budda-tammu.atlassian.net/rest/api/2/myself' --header 'Authorization: Basic $newtoken' --header 'Accept:application/json' --header 'Content-Type: application/json')
+token=$(curl -kv -i -X POST 'https://budda-tammu.atlassian.net/rest/api/2/myself' --header 'Accept:application/json' --header 'Content-Type: application/json')
 echo "Curl executed succeeded!!!"
 echo "Data of curl is $token"
 echo "Curl executed succeeded!!!"
