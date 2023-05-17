@@ -1,5 +1,5 @@
 #!/bin/bash
-token=$(curl -u $user1:$pass1 -X POST 'https://budda-tammu.atlassian.net/rest/api/2/myself' --header 'Accept:application/json' --header 'Content-Type: application/json' -S -f)
+token=$(curl -u $user1:$pass1 -X POST 'https://budda-tammu.atlassian.net/rest/api/2/myself' --header 'Accept:application/json' --header 'Content-Type: application/json' -S -f -d 'grant_type:authorization_code')
 echo "Curl executed succeeded!!!"
 echo "Data of curl is $token"
 echo "Curl executed succeeded!!!"
